@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong/latlong.dart';
+import 'package:flutter_map/plugin_api.dart';
+
+import './plugins/trip_info_plugin.dart';
 
 void main() => runApp(MyApp());
 
@@ -67,7 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: new AppBar(title: new Text('My Transport v2')),
         body: new FlutterMap(
             options: new MapOptions(
-                center: new LatLng(1.274794, 103.798872), minZoom: 10.0),
+              center: new LatLng(1.274794, 103.798872),
+              minZoom: 15.0,
+              plugins: [
+                TripInfoPlugin(),
+              ]
+            ),
             layers: [
               new TileLayerOptions(
                   urlTemplate:
@@ -77,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     'pk.eyJ1IjoicnVpYmluY2hpbiIsImEiOiJjazFhaHBveXEyNTQ0M21uaWRuNDQ1dW13In0.vMQ2WL_vco0SbgDY9s_SIQ',
                     'id': 'mapbox.mapbox-streets-v7'
                   }),
+              new MyTripInfoPluginOptions(text: 'Distance left: 600m\n ETA: 5 mins'),
               new MarkerLayerOptions(markers: [
                   new Marker(
                     width: 45.0,

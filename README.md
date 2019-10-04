@@ -1,6 +1,14 @@
 # my_transport_v
 
-A new Flutter project.
+A Flutter project prototype to demonstrate our group's idea for the hackathon in GeekOut Poly 2019.
+Aims to show how the existing MyTransport app can be refined to present the various information
+the app have in a more concise manner.
+
+Only shows one screen till to time constraint.
+
+This is our first time building android apps in Flutter or building mobile apps in general.
+
+Built by Chin Rui Bin, eu-Joe.
 
 ## Getting Started
 

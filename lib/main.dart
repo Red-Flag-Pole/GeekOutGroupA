@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: new FlutterMap(
             options: new MapOptions(
               center: new LatLng(1.274794, 103.798872),
-              minZoom: 15.0,
+              minZoom: 25.0,
               plugins: [
                 TripInfoPlugin(),
               ]
@@ -136,6 +136,31 @@ class _MyHomePageState extends State<MyHomePage> {
                             icon: Icon(CustomAppIcons.traffic_cone),
                             color: Colors.deepOrange,
                             iconSize: 40.0,
+                            onPressed: () {print('Marker tapped');},
+                          )
+                        ]
+                      )
+
+                    )
+                ),
+                new Marker(
+                    width: 100.0,
+                    height: 100.0,
+                    point: new LatLng(1.27355, 103.80170),
+                    builder: (context) => new Container(
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            "Turn Left in 20 M",
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 14.0
+                            ),
+                          ),
+                          IconButton(
+                            icon: Icon(CustomAppIcons.direction),
+                            color: Colors.black,
+                            iconSize: 30.0,
                             onPressed: () {print('Marker tapped');},
                           )
                         ]

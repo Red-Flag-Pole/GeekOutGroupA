@@ -4,6 +4,7 @@ import 'package:latlong/latlong.dart';
 import 'package:flutter_map/plugin_api.dart';
 
 import './plugins/trip_info_plugin.dart';
+import './presentation/custom_app_icons_icons.dart';
 
 void main() => runApp(MyApp());
 
@@ -93,7 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     point: new LatLng(1.276971, 103.803807),
                     builder: (context) => new Container(
                       child: IconButton(
-                        icon: Icon(Icons.location_on),
+                        //icon: Icon(Icons.location_on),
+                        icon: Icon(CustomAppIcons.location),
                         color: Colors.blue,
                         iconSize: 45.0,
                         onPressed: () {
@@ -115,6 +117,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                       ),
                     )
+                ),
+                new Marker(
+
                 )
               ]),
               new PolylineLayerOptions(
@@ -137,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   new Polyline(
                       points: points4,
                       strokeWidth: 5.0,
-                      color: Colors.red
+                      color: Colors.yellowAccent
                   ),
                   new Polyline(
                       points: points5,
@@ -147,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   new Polyline(
                       points: points6,
                       strokeWidth: 5.0,
-                      color: Colors.red
+                      color: Colors.lightGreen
                   ),
                 ]
               )

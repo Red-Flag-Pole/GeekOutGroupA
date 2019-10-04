@@ -119,20 +119,30 @@ class _MyHomePageState extends State<MyHomePage> {
                     )
                 ),
                 new Marker(
-                  width: 40.0,
-                  height: 40.0,
-                  point: new LatLng(1.277004, 103.802380),
-                  builder: (context) => new Container(
-                    child: IconButton(
-                      icon: Icon(CustomAppIcons.traffic_cone),
-                      color: Colors.deepOrange,
-                      iconSize: 40.0,
-                      onPressed: () {
-                        print('Marker tapped');
-                      },
-                    ),
-                  )
-                )
+                    width: 100.0,
+                    height: 100.0,
+                    point: new LatLng(1.277004, 103.802290),
+                    builder: (context) => new Container(
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            "Road accident\nAvoid lane 1",
+                            style: TextStyle(
+                                color: Colors.deepOrange,
+                                fontSize: 14.0
+                            ),
+                          ),
+                          IconButton(
+                            icon: Icon(CustomAppIcons.traffic_cone),
+                            color: Colors.deepOrange,
+                            iconSize: 40.0,
+                            onPressed: () {print('Marker tapped');},
+                          )
+                        ]
+                      )
+
+                    )
+                ),
               ]),
               new PolylineLayerOptions(
                 polylines: [
@@ -168,6 +178,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ]
               )
-            ]));
+            ],
+
+        )
+    );
+
   }
 }

@@ -80,10 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
             layers: [
               new TileLayerOptions(
                   urlTemplate:
-                  "https://api.mapbox.com/styles/v1/ruibinchin/ck1au1suv4s7z1cnr64aru279/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicnVpYmluY2hpbiIsImEiOiJjazFhaHBveXEyNTQ0M21uaWRuNDQ1dW13In0.vMQ2WL_vco0SbgDY9s_SIQ",
+                  "XXX",
                   additionalOptions: {
                     'accessToken':
-                    'pk.eyJ1IjoicnVpYmluY2hpbiIsImEiOiJjazFhaHBveXEyNTQ0M21uaWRuNDQ1dW13In0.vMQ2WL_vco0SbgDY9s_SIQ',
+                    'xxxx',
                     'id': 'mapbox.mapbox-streets-v7'
                   }),
               new MyTripInfoPluginOptions(text: 'Distance left: 600m\n ETA: 5 mins'),

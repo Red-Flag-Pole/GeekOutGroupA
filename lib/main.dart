@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     point: new LatLng(1.274343, 103.798013),
                     builder: (context) => new Container(
                       child: IconButton(
-                        icon: Icon(Icons.location_on),
+                        icon: Icon(CustomAppIcons.location),
                         color: Colors.blue,
                         iconSize: 45.0,
                         onPressed: () {
@@ -119,7 +119,19 @@ class _MyHomePageState extends State<MyHomePage> {
                     )
                 ),
                 new Marker(
-
+                  width: 40.0,
+                  height: 40.0,
+                  point: new LatLng(1.277004, 103.802394),
+                  builder: (context) => new Container(
+                    child: IconButton(
+                      icon: Icon(CustomAppIcons.traffic_cone),
+                      color: Colors.deepOrange,
+                      iconSize: 40.0,
+                      onPressed: () {
+                        print('Marker tapped');
+                      },
+                    ),
+                  )
                 )
               ]),
               new PolylineLayerOptions(

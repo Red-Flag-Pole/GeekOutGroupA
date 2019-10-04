@@ -5,4 +5,4 @@ A simple and plain Flutter project created in an _attempt_ to demonstrate our gr
 
 This is our first time building android apps in Flutter or building mobile apps.
 
-Built in about 10 hours.
+Built in about 10 hours by Rui Bin & eu-Joe
